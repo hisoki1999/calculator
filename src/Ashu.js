@@ -13,12 +13,12 @@ const Ashu = () => {
      setmulti(Number(input1) * Number(input2));
      setsub(Number(input1) - Number(input2));
      setdivision(Number(input1) / Number(input2));
-     setremainder(Number(input1) % Number(input2))
+     setremainder(Number(input1) % Number(input2));
     }
 
-     useEffect(() => {
-      result()
-     },[input1,input2])
+    //  useEffect(() => {
+    //   result()
+    //  },[input1,input2])
 
   return (
     <div className="flex flex-col mt-8">
@@ -28,11 +28,11 @@ const Ashu = () => {
         <button className='bg-yellow-500 p-1 rounded' onClick={ () => setchange(change-2)} >Click Low </button> */}
         <input type='number' value={input1}
          onChange={(e) => {setinput1(e.target.value)}}
-        className='border-2'/>
+        className='border-2 border-black rounded'/>
         <input type='number' value={input2}
          onChange={(e) => {setinput2(e.target.value)}}
-        className='border-2'/>
-        {/* <button className='bg-yellow-500 p-1 rounded'onClick={result} > Click here</button> */}
+        className='border-2 border-black rounded'/>
+        <button className='bg-yellow-500 p-1 rounded'onClick={result} > Click here</button>
 
         <div className='text-2xl font-bold'>ADD:{add}</div>
         <div>Multiply:{' '}{multi}</div>
